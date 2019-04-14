@@ -1,6 +1,5 @@
-import socket
-import ssl
 import copy
+import re
 def parse_http_response(response):
     res=response.split("\n")
     第一行=res[0]
@@ -14,3 +13,5 @@ def parse_http_response(response):
     response_dict["version"]=version
     response_dict["stat"]=status
     return response_dict
+def parse_xml(html):
+    

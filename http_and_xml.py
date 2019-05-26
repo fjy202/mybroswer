@@ -14,4 +14,7 @@ def parse_http_response(response):
     response_dict["stat"]=status
     return response_dict
 def parse_xml(html):
-    
+    start_tag=False
+    for x in html:
+        if x=="<":
+            start_tag=True
